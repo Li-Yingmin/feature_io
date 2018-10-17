@@ -1,2 +1,2 @@
 # feature_io
-io for feature
+io for features
