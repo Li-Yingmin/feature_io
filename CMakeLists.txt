@@ -3,4 +3,4 @@ project(feature_io)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(feature_io main.cpp)
+add_executable(feature_io main.cpp feature_io.h feature_io.cpp)
