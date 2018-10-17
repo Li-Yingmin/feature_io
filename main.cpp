@@ -11,7 +11,7 @@
 void change_comma_to_space(std::string &in_file_path, std::string &out_file_path);
 int main() {
   std::string in_file_path = "/mnt/hgfs/winproj/data/xface_cluster/duoceng15feat.txt";
-  std::string out_file_path = "/mnt/hgfs/winproj/data/xface_cluster/duoceng15feat.back.txt";
+  std::string out_file_path = "/mnt/hgfs/winproj/data/xface_cluster/duoceng15feat.back2.txt";
   change_comma_to_space(in_file_path, out_file_path);
   return 0;
 }
