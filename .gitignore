@@ -9,6 +9,7 @@ output
 .gradle
 third_module
 *.tmp
+.tmp
 cmake-build-debug/
 cmake-build-release/
 .vscode
