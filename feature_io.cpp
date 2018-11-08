@@ -38,10 +38,10 @@ void read_trkid_n_nf(const std::string &in_file_path, std::vector<std::vector<st
                      const unsigned int &feature_dim);
 
 void read_label_1f_to_map(const std::string &in_file_path,
-                   std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                   std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                    const unsigned int &feature_dim);
 void read_trkid_n_nf_to_map(const std::string &in_file_path,
-                   std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                   std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                    const unsigned int &feature_dim);
 
 bool feature_io_tool::read_features_to_vec(const std::string &in_file_path,
@@ -71,7 +71,7 @@ bool feature_io_tool::read_features_to_vec(const std::string &in_file_path,
 }
 
 bool feature_io_tool::read_trackid_feats_to_map(const std::string &in_file_path,
-                                                std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                                                std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                                                 const unsigned char &content_type, const unsigned int &feature_dim) {
   if(in_file_path.empty() || (feature_dim != 256 && feature_dim != 128)) {
     return false;
@@ -162,7 +162,7 @@ void read_trkid_n_nf(const std::string &in_file_path, std::vector<std::vector<st
 }
 
 void read_label_1f_to_map(const std::string &in_file_path,
-                   std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                   std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                    const unsigned int &feature_dim) {
   std::ifstream in(in_file_path);
   std::string line;
@@ -192,7 +192,7 @@ void read_label_1f_to_map(const std::string &in_file_path,
   in.close();
 }
 void read_trkid_n_nf_to_map(const std::string &in_file_path,
-                     std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                     std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                      const unsigned int &feature_dim) {
   std::ifstream in(in_file_path);
   std::string line;

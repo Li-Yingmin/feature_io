@@ -38,7 +38,7 @@ bool read_features_to_vec(const std::string &in_file_path, std::vector<std::vect
          const unsigned char &content_type = NONE_LABEL_1F, const unsigned int &feature_dim = 256);
 
 bool read_trackid_feats_to_map(const std::string &in_file_path,
-                      std::unordered_map<std::string, std::vector<std::string>> trkid_featvec_uomap,
+                      std::unordered_map<std::string, std::vector<std::string>> &trkid_featvec_uomap,
                       const unsigned char &content_type = TRKID_N_NF, const unsigned int &feature_dim = 256);
 
 } // namespace io_tool
